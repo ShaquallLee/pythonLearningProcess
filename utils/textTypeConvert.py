@@ -1,4 +1,27 @@
 import base64
+import hashlib
+
+
+def get_md5(text):
+    '''
+    将text编码为md5形式
+    :param text:
+    :return:
+    '''
+    md5 = hashlib.md5()
+    md5.update(text)
+    return md5.hexdigest()
+
+
+def get_sha1(text):
+    '''
+    SHA1编码
+    :param text:
+    :return:
+    '''
+    sha1 = hashlib.sha1()
+    sha1.update(text)
+    return sha1.hexdigest()
 
 
 def get_base64(text, code):
